@@ -2,4 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  label {
+    display: flex;
+    flex-direction: column;
+
+    &+label {
+      margin-top: 16px;
+    }
+  }
 }

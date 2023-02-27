@@ -16,13 +16,14 @@ export default async function userHandler(
 ) {
   const { query, method, body } = req;
   const dbName = process.env.MONGODB_DB as string;
+  const client = await clientPromise;
+  const db = client.db(dbName);
 
   switch (method) {
     case 'POST':
       // Get data from your database
       const parsedBody = schema.parse(body);
-      const client = await clientPromise;
-      const db = client.db(dbName);
+
       db.collection("contact").insertOne(parsedBody);
 
       res.status(200).json(parsedBody);

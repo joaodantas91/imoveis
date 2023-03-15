@@ -1,0 +1,7 @@
+@use 'styles/base/variables';
+@use "sass:color";
+
+.aside {
+  background: rgba(variables.$primary-color, $alpha: 60%);
+  border-radius: 16px;
+}

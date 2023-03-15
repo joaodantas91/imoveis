@@ -6,7 +6,7 @@ type ContainerProps = {
   className?: string;
 }
 const Container: React.FC<ContainerProps> = (props: ContainerProps) => {
-  return <div {...props} className={styles.container}>{props.children}</div>
+  return <div {...props} className={[styles.container, props.className].join(" ")}>{props.children}</div>
 }
 
 export default Container;

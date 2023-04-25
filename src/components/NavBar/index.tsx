@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from './navbar.module.scss';
 
 const navItems = [{
   label: "Início",
@@ -20,7 +21,7 @@ function RenderNavItems() {
 
 function NavBar() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <RenderNavItems />
       </ul>

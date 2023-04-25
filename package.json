@@ -17,6 +17,7 @@
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "formik": "^2.2.9",
+    "material-symbols": "^0.5.5",
     "mongodb": "^5.0.1",
     "next": "13.1.6",
     "react": "18.2.0",
@@ -24,6 +25,7 @@
     "react-query": "^3.39.3",
     "swiper": "^9.0.5",
     "typescript": "4.9.5",
+    "yet-another-react-lightbox": "^3.5.2",
     "yup": "^1.0.0",
     "zod": "^3.20.6"
   },

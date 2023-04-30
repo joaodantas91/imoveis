@@ -14,17 +14,13 @@ import { Grid, Manipulation, Navigation } from "swiper";
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
+import { Properties } from '@/types/properties';
 
-type BannerProps = {
-  data: {
-    id: string;
-    title: string;
-    description: string;
-    images: string[];
-  }
+type InternalCarouselProps = {
+  data: Properties;
 }
 
-function Banner({ data }: BannerProps) {
+function InternalCarousel({ data }: InternalCarouselProps) {
   const [index, setIndex] = useState(-1);
   const imagePath = `/db/images/${data.id}`;
 
@@ -42,8 +38,9 @@ function Banner({ data }: BannerProps) {
           </span>
         </div>
         <Swiper
-          slidesPerView={5}
-          slidesPerGroup={5}
+          slidesPerView={4.6}
+          loop={false}
+          slidesPerGroup={4}
           grid={{
             rows: 2,
             fill: "column"
@@ -90,6 +87,10 @@ function Banner({ data }: BannerProps) {
         </Swiper >
       </div>
       <Lightbox
+        carousel={{
+          finite: true,
+        }}
+        controller={{closeOnBackdropClick: true}}
         plugins={[Thumbnails]}
         thumbnails={{
           vignette: false,
@@ -109,5 +110,5 @@ function Banner({ data }: BannerProps) {
   );
 }
 
-export default Banner;
+export default InternalCarousel;
 

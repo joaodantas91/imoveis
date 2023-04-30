@@ -1,9 +1,10 @@
-const localDB = [
+import { Properties } from "@/types/properties";
+
+const localDB: Properties[] = [
     {
         id: "1",
         title: "Ed. Via Venetto",
-        description: `
-            Andar alto
+        description: `Andar alto
             310m2;
             3 suítes com sacadas individuais, sendo 1 master com closet;
             Sala íntima com sacada;
@@ -25,8 +26,7 @@ const localDB = [
         id: "2",
         title: "Casa no  Condomínio Gran Paraíso. ",
         // price: "56000000",
-        description: `
-            Lote 7x20
+        description: `Lote 7x20
             98 m2 de área construída 
             3 quartos sendo uma  suíte com jardim de inverno. 
             Pé direito alto na sala
@@ -42,8 +42,7 @@ const localDB = [
     {
         id: "3",
         title: "Casa no  Condomínio Gran Paraíso. ",
-        description: `
-            Lote 8x20
+        description: `Lote 8x20
             110m2 de área construída 
             3 quartos sendo uma suíte
             Pé direito alto na sala

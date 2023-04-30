@@ -1,0 +1,40 @@
+@use 'styles/base/variables';
+
+@mixin Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: variables.$primary-color;
+    padding: 11px 20px;
+    border-radius: 999px;
+    color: #fff;
+    transition: all 0.3s;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.button-primary {
+    @include Button;
+    &:hover {
+        background: variables.$secondary-color;
+    }
+}
+
+.button-primary--grey {
+    @include Button;
+    &:hover {
+        background: variables.$grey-color;
+    }
+}
+
+.button-secondary {
+    @include Button;
+    background-color: variables.$secondary-color;
+    &:hover {
+        background: variables.$grey-color;
+    }
+}
+

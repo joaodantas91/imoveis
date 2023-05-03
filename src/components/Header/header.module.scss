@@ -1,12 +1,5 @@
 @use 'styles/base/variables';
 
-.headerContainer {
-  display: flex;
-  justify-content: space-between;
-  height: variables.$header-height;
-  align-items: center;
-}
-
 .header {
   background: #fff;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
@@ -14,6 +7,24 @@
   left: 0;
   right: 0;
   z-index: 10;
+  transition: all 0.3s;
+
+  &.transparent {
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  &.isScrolled {
+    background: variables.$secondary-color;
+  }
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: variables.$header-height;
+    align-items: center;
+  }
 }
 
 .logo {

@@ -1,0 +1,83 @@
+@use 'styles/base/variables';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 20px 20px 20px;
+  overflow: hidden;
+  background: variables.$secondary-color;
+  color: #fff;
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    height: 335px;
+  }
+
+  .transaction-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 104px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DF893F;
+    border-radius: 0px 0px 20px 0px;
+    text-transform: capitalize;
+  }
+
+  .description {
+    padding: 14px 34px 17px;
+
+    .type {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      margin-bottom: 6px;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .details {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      // align-items: flex;
+      display: flex;
+      gap: 7px;
+
+      li {
+        position: relative;
+
+        &:not(:first-child) {
+          padding-left: 10px;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: variables.$primary-color;
+          }
+        }
+      }
+    }
+
+    h5 {
+      margin-bottom: 31px;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+}

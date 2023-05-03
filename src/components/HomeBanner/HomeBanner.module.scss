@@ -1,0 +1,27 @@
+@use 'styles/base/variables';
+
+.HomeBanner {
+  background-image: url('/img/banner/home.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  padding-top: calc(variables.$header-height + 38px);
+  min-height: 80vh;
+
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0 0 15px;
+    color: #FFFFFF;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0 0 51px;
+    color: #FFFFFF;
+  }
+}

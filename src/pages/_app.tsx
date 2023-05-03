@@ -6,20 +6,31 @@ import { Header } from '@/components/Header';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import mainStyle from '@/styles/components/main.module.scss'
 import { FloatingWhatsapp } from '@/components/FloatingWhatsapp';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-const poppins = Poppins({subsets: ['latin'], weight: ['100','200','300','400', '500', '600','700', '800', '900']})
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient()
+  const router = useRouter();
+  const isHomePage = router.pathname === '/';
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <div  className={poppins.className}>
-        <Header />
-        <main className={mainStyle.main}>
-          <Component {...pageProps} />
-          <FloatingWhatsapp />
-        </main>
-      </div>  
-    </QueryClientProvider>
+    <>
+      <Head>
+        <title>Elisangela Brígida - Consultoria Imobiliária</title>
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <div className={poppins.className}>
+          <Header isHomePage={isHomePage} />
+          <main className={`${mainStyle.main} ${isHomePage ? mainStyle.noPaddingTop : ''}`}>
+            <Component {...pageProps} />
+            <FloatingWhatsapp />
+          </main>
+        </div>
+      </QueryClientProvider>
+    </>
   );
 }

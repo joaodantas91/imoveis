@@ -18,20 +18,20 @@ export default function Property({ params }: { params: { propertyId: string } })
   // }))
 
   const data = localDB.find(item => item.id === propertyId);
-  
+
   if (data) {
     return (
       <>
         <InternalCarousel data={data} />
         <Section>
           <Container>
-            <p><Link className="button" href="/properties" >Voltar para lista</Link></p>
+            <p><Link className="button" href="/" >Voltar para lista</Link></p>
           </Container>
           <Container className={style.container}>
-          
+
             <article>
               <h3>{data.title}</h3>
-              <p dangerouslySetInnerHTML={{__html: data.description.replace(/\n/g, "<br />")}} />
+              <p dangerouslySetInnerHTML={{ __html: data.description.replace(/\n/g, "<br />") }} />
             </article>
             <PropertyDetailsAside />
           </Container>

@@ -5,7 +5,7 @@ const localDB: Properties[] = [
         id: "1",
         title: "Ed. Via Venetto",
         type: "apartamento",
-        price: '56000000',
+        price: '130000000',
         transactionType: "venda",
         details: {
             area: '310',

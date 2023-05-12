@@ -7,6 +7,7 @@ import logoWhite from "public/img/logo/logo-white.svg"
 import Link from 'next/link';
 import { Button } from '../Button';
 import { useEffect, useState } from 'react';
+import { Logo } from '../Logo';
 
 type HeaderProps = {
   isHomePage: boolean;
@@ -36,9 +37,10 @@ export function Header({ isHomePage }: HeaderProps) {
       <Container className={styles.headerContainer}>
         <Link href="/" >
           <Image src={isHomePage ? logoWhite : logo} alt="" className={styles.logo} />
+          <Logo isHomePage={isHomePage} isScrolled={isScrolled} />
         </Link>
-        <NavBar />
-        <Button>Entre em contato</Button>
+        <NavBar isScrolled={isScrolled} />
+        <Button variant={isScrolled ? 'primary-grey' : 'primary'}>Entre em contato</Button>
       </Container>
     </header >
   );

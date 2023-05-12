@@ -11,6 +11,7 @@ export default function Page() {
       <HomeBanner />
       <Section>
         <Container>
+          <h2 className={styles["module-title"]}>Destaques</h2>
           <div className={styles.grid}>
             {localDB.map((item) => (
               <PropertyCard key={item.id} data={item} href={`/${item.id}`} />

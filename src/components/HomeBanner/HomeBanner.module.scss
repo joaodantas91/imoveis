@@ -8,20 +8,25 @@
 
   text-align: center;
   padding-top: calc(variables.$header-height + 38px);
-  min-height: 80vh;
+  padding-bottom: 115px;
+
+  @media (min-width: 1920px) {
+    height: 714px;
+  }
 
   h1 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 40px;
-    margin: 0 0 15px;
+    line-height: 60px;
+    margin: 0 0 34px;
     color: #FFFFFF;
   }
 
   p {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    margin: 0 0 51px;
+    margin: 0 0 48px;
     color: #FFFFFF;
   }
 }

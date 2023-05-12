@@ -2,6 +2,10 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import styles from './navbar.module.scss';
 
+type NavBarProps = {
+  isScrolled: boolean;
+}
+
 const navItems = [
   {
     label: "Sobre mim",
@@ -29,7 +33,7 @@ function RenderNavItems() {
   );
 }
 
-function NavBar() {
+function NavBar({ isScrolled }: NavBarProps) {
   return (
     <nav className={styles.nav}>
       <ul>

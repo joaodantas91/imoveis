@@ -6,7 +6,7 @@ import Image from "next/image";
 export function FloatingWhatsapp() {
     return (
         <Link target="_blank" href={`https://wa.me/5591981263809`} className={styles.FloatingWhatsapp}>
-            <Image alt="Icone Whatsapp" src={WhatsappIcon} />
+            <Image alt="Icone Whatsapp" src="/img/icons/whatsapp.svg" width="70" height="70" />
         </Link>
     );
 }

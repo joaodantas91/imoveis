@@ -8,6 +8,7 @@ import mainStyle from '@/styles/components/main.module.scss'
 import { FloatingWhatsapp } from '@/components/FloatingWhatsapp';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import FlexSearchContext, { FlexSearchProvider } from '@/context/FlexSearchContext';
 
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isHomePage = router.pathname === '/';
 
   return (
-    <>
+    <FlexSearchProvider>
       <Head>
         <title>Elisangela Brígida - Consultoria Imobiliária</title>
       </Head>
@@ -31,6 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </main>
         </div>
       </QueryClientProvider>
-    </>
+    </FlexSearchProvider>
   );
 }

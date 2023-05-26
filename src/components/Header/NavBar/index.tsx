@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
-import styles from './navbar.module.scss';
 
 type NavBarProps = {
   isScrolled: boolean;
@@ -21,7 +20,7 @@ const navItems = [
   }
 ]
 
-function RenderNavItems() {
+function RenderNavItems () {
   return (
     <>
       {navItems.map((item) => (
@@ -33,9 +32,9 @@ function RenderNavItems() {
   );
 }
 
-function NavBar({ isScrolled }: NavBarProps) {
+function NavBar ({ isScrolled }: NavBarProps) {
   return (
-    <nav className={styles.nav}>
+    <nav>
       <ul>
         <RenderNavItems />
       </ul>

@@ -9,7 +9,7 @@ type PropertyCardProps = {
   href: string;
 };
 
-export function PropertyCard({ data, href }: PropertyCardProps) {
+export function PropertyCard ({ data, href }: PropertyCardProps) {
   const formattedPrice = formatMoney(data.price);
 
   return (
@@ -32,8 +32,7 @@ export function PropertyCard({ data, href }: PropertyCardProps) {
           <li>{data.details.bath + ` banheiro${Number(data.details.bath) > 1 ? 's' : ''}`}</li>
           <li>{data.details.garage + ` vaga${Number(data.details.garage) > 1 ? 's' : ''}`}</li>
         </ul>
-        <p className={styles.price}>{formattedPrice}</p>
-
+        {data.transactionType === "aluguel" ? (<p className={styles.price}>{formattedPrice}</p>) : null}
       </div>
     </Link>
   );

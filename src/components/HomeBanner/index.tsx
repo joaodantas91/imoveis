@@ -2,8 +2,8 @@ import { SearchBar } from "./SearchBar";
 import styles from './HomeBanner.module.scss';
 import { useLayoutEffect } from "react";
 
-export function HomeBanner() {
-  useLayoutEffect(() => console.log(window.screen.availWidth, window.screen.availHeight), [])
+export function HomeBanner () {
+  // useLayoutEffect(() => console.log(window.screen.availWidth, window.screen.availHeight), [])
   return (
     <div className={styles.HomeBanner}>
       <h1>

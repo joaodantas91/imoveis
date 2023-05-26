@@ -7,17 +7,17 @@ import logoWhite from "public/img/logo/logo-white.svg"
 import Link from 'next/link';
 import { Button } from '../Button';
 import { useEffect, useState } from 'react';
-import { Logo } from '../Logo';
+import { Logo } from './Logo';
 
 type HeaderProps = {
   isHomePage: boolean;
 }
 
-export function Header({ isHomePage }: HeaderProps) {
+export function Header ({ isHomePage }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    function handleScroll() {
+    function handleScroll () {
       setIsScrolled(window.scrollY > 127);
     }
 
